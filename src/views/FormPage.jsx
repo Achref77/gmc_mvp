@@ -15,9 +15,10 @@ export default function Login(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(props.history);
+
+    
     props.history.push("/admin");
-  }
+  } 
 
   return (
     <div className="Login">
