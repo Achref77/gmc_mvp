@@ -19,7 +19,16 @@ import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
 
 class AdminNavbarLinks extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    function Logout(event) {
+      event.preventDefault();
+
+      // console.log(props.history);
+      // props.history.push("/login");
+    }
     const notification = (
       <div>
         <i className="fa fa-globe" />
@@ -69,9 +78,7 @@ class AdminNavbarLinks extends Component {
             <MenuItem divider />
             <MenuItem eventKey={2.5}>Separated link</MenuItem>
           </NavDropdown>
-          <NavItem eventKey={3} href="#">
-            Log out
-          </NavItem>
+          <NavItem eventKey={Logout}>Log out</NavItem>
         </Nav>
       </div>
     );
