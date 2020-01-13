@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
-import { withRouter } from "react-router-dom";
-import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 
 export default function Login(props) {
   console.log(props);
@@ -16,9 +14,12 @@ export default function Login(props) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    
-    props.history.push("/admin");
-  } 
+    if (email === "anouar@gmail.com") {
+      console.log(props.history);
+      props.history.push("/admin");
+    }
+  }
+
 
   return (
     <div className="Login">
