@@ -8,7 +8,8 @@ import AdminLayout from "./layouts/Admin";
 
 export default class Register extends React.Component {
   state = {
-    toDashboard: false
+    toDashboard: false,
+    test: "test"
   };
 
   render() {
