@@ -13,11 +13,13 @@ export default function Login(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     if (email === "anouar@gmail.com") {
       console.log(props.history);
       props.history.push("/admin");
     }
   }
+
 
   return (
     <div className="Login">
